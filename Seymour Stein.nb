@@ -1,0 +1,63 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1432,         55]
+NotebookOptionsPosition[      1088,         38]
+NotebookOutlinePosition[      1465,         54]
+CellTagsIndexPosition[      1422,         51]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["A2-2", "Section",
+ CellChangeTimes->{{3.726503901028437*^9, 3.7265039027737393`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"fn1", "[", 
+   RowBox[{"n_", ",", "m_", ",", "\[Nu]_", ",", "\[Mu]_", ",", "x_"}], "]"}], 
+  ":=", 
+  RowBox[{
+   RowBox[{"LegendreP", "[", 
+    RowBox[{"n", ",", "m", ",", " ", "x"}], "]"}], 
+   RowBox[{"LegendreP", "[", 
+    RowBox[{"\[Nu]", ",", "\[Mu]", ",", " ", "x"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.7265039073723617`*^9, 3.726503992558992*^9}}]
+}, Open  ]]
+},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+Magnification:>2. Inherited,
+FrontEndVersion->"11.0 for Microsoft Windows (64-bit) (September 21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 91, 1, 140, "Section"],
+Cell[674, 25, 398, 10, 86, "Input"]
+}, Open  ]]
+}
+]
+*)
+
