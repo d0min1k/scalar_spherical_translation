@@ -10,7 +10,8 @@ fn = @(r, th, ph) Z_fn(n, k.*r).*legendreP2( n, m, cos(th) ).*exp(1i.*m.*ph);
 
 
 %% ------------------------------- DO plots -------------------------------
-x_ = linspace(-1, 1, 200);
+T = 10;
+x_ = linspace(-T, T, 200);
 [x, y] = meshgrid(x_, x_);
 z = 0;
 
@@ -18,11 +19,11 @@ R =  sqrt(x.^2 + y.^2 + z.^2);
 TH = pi/2;
 PH = atan2(y, x);
 
-R1 =  sqrt((x-1).^2 + y.^2 + z.^2);
+R1 =  sqrt( (x-r0*cos(ph0)).^2 + (y-r0*sin(ph0)).^2 + z.^2);
 TH1 = pi/2;
 PH1 = atan2(y, (x-1) );
 
-%%
+%% ---------------------------------- I1 -----------------------------------
 figure()
 I1 = abs( fn(R1, TH1, PH1) );
 pcolor( x, y, I1);
@@ -31,7 +32,11 @@ xlabel('x'); ylabel('y');
 colorbar;
 pbaspect([1 1 1])
 
-%%
+hold on
+scatter(r0*sin(th0)*cos(ph0), r0*sin(th0)*sin(ph0), '*r')
+
+%% ---------------------------------- I2 -----------------------------------
+
 % I0 = abs( fn(R, TH, PH) );
 figure()
 I2 = abs( translated_fn( Z_fn, R, TH, PH, r0, th0, ph0, n, m ) );
@@ -41,7 +46,5 @@ xlabel('x'); ylabel('y');
 colorbar;
 pbaspect([1 1 1])
 
-
-%%
 hold on
-scatter(1,0, '*r')
+scatter(r0*sin(th0)*cos(ph0), r0*sin(th0)*sin(ph0), '*r')

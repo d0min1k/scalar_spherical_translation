@@ -15,14 +15,15 @@ function [ y ] = translated_fn( Z_fn, r, th, ph, r0, th0, ph0, n, m )
   R1  = r1(r, th, ph);
 
 % ------------------------------- Summation -------------------------------
-  N_nu =  20;
+  N_nu =  10;
 
   y = 0;
 
   for nu = 0 : N_nu
     for mu = - nu : 1 : nu
-      for p = abs(n - nu) : 2 : n + nu
-      % for p = 1 : 1 : n + nu
+      % for p = abs(n - nu) : 2 : n + nu % according to Seymour Stein
+%       for p = abs(n - nu) : 1 : n + nu % according to Seymour Stein
+      for p = 0 : 2 : n + nu
       % for p = -N_nu : 1 : N_nu
 
         % Checking
