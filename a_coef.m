@@ -2,11 +2,11 @@ function [ a ] = a_coef( m, n, mu, nu, p )
 % a_coef: coeficients for translational addition theorems
 
   % conditions
-  c1 = and( (n + m >= 0)      , (n - m >= 0)    );
-  c2 = and( (nu + mu >= 0)    , (nu - mu >= 0)    );
-  c3 = and( (p - m - mu >= 0) , (p + m + mu >= 0)    );
+  c1 = and( (n + m)      >= 0,      (n - m) >= 0 );
+  c2 = and( (nu + mu)    >= 0,    (nu - mu) >= 0 );
+  c3 = and( (p - m - mu) >= 0, (p + m + mu) >= 0 );
 
-  if all([c1 , c2, c3])
+  if all([c1, c2, c3]) % if all conditions are satisfied
 
     % Computing factors
     f1 = factorial(n + m)      / factorial(n - m);
