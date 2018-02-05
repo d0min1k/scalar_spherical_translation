@@ -11,8 +11,8 @@ y1 = @(r, th, ph) r.*sin(th).*sin(ph) - r0.*sin(th0).*sin(ph0);
 z1 = @(r, th, ph) r.*cos(th) - r0.*cos(th0);
 
 r1  = @(r, th, ph) sqrt( x1(r, th, ph).^2 + y1(r, th, ph).^2 + z1(r, th, ph).^2 );
-% th1 = @(r, th, ph) acos( z1(r, th, ph) ./ (r1(r, th, ph) + eps) ); % TODO: May include singularity.
-th1 = @(r, th, ph)  pi / 2;
+th1 = @(r, th, ph) acos( z1(r, th, ph) ./ (r1(r, th, ph) + eps) ); % TODO: May include singularity.
+% th1 = @(r, th, ph)  pi / 2;
 ph1 = @(r, th, ph) atan2( y1(r, th, ph), x1(r, th, ph) );
 
 

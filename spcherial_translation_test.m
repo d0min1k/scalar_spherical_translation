@@ -25,13 +25,14 @@ PH1 = atan2(y, (x-1) );
 %%
 figure()
 I1 = abs( fn(R1, TH1, PH1) );
-pcolor( x+1, y, I1);
+pcolor( x, y, I1);
 shading interp;
 xlabel('x'); ylabel('y');
 colorbar;
 pbaspect([1 1 1])
 
 %%
+% I0 = abs( fn(R, TH, PH) );
 figure()
 I2 = abs( translated_fn( Z_fn, R, TH, PH, r0, th0, ph0, n, m ) );
 pcolor(x, y, I2);

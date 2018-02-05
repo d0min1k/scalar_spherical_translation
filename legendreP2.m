@@ -75,7 +75,9 @@ for j=l-1:-1:0,
 end;
 % Estimate the error
 err=maxcf*eps;
-fprintf('Coef is %.16f, err %.16f\n',maxcf, err);
+
+
+% fprintf('Coef is %.16f, err %.16f\n',maxcf, err);
 
 % Now we're done adding coefficients. However, if the exponent of x
 % corresponding to the last added coefficient is 1 (polynomial is odd),
