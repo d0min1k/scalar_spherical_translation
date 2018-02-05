@@ -2,8 +2,8 @@
 
 % coordinates of system 1 in system 0
 th0 = pi/2;
-ph0 = 0;
-r0 = 1.5;
+ph0 = pi/4;
+r0 = 2;
 
 % new coordinates in terms of old spherical coordinates
 x1 = @(r, th, ph) r.*sin(th).*cos(ph) - r0.*sin(th0).*cos(ph0);
