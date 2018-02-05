@@ -60,8 +60,8 @@ colorbar;
 pbaspect([1 1 1])
 title('Translated Scalar Spherical Wave')
 
-hold on
-scatter(r0*sin(th0)*cos(ph0), r0*sin(th0)*sin(ph0), '*r')
+% hold on
+% scatter(r0*sin(th0)*cos(ph0), r0*sin(th0)*sin(ph0), '*r')
 
 
 %% Difference I2-I1
