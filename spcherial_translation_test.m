@@ -2,8 +2,8 @@ clear all
 k = 1;
 init;
 
-n=1;
-m=1;
+n=2;
+m=2;
 
 %% ------ Using addition theorem for spherical scalar wave function -------
 

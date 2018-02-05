@@ -15,7 +15,7 @@ function [ y ] = translated_fn( Z_fn, r, th, ph, r0, th0, ph0, n, m )
   R1  = r1(r, th, ph);
 
 % ------------------------------- Summation -------------------------------
-  N_nu =  30;
+  N_nu =  15;
 
   y = 0;
 
