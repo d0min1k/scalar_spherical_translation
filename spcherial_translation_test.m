@@ -31,6 +31,7 @@ shading interp;
 xlabel('x'); ylabel('y');
 colorbar;
 pbaspect([1 1 1])
+title('Wanted Wave Position')
 
 hold on
 scatter(r0*sin(th0)*cos(ph0), r0*sin(th0)*sin(ph0), '*r')
@@ -45,6 +46,13 @@ shading interp;
 xlabel('x'); ylabel('y');
 colorbar;
 pbaspect([1 1 1])
+title('Translated Scalar Spherical Wave')
 
 hold on
 scatter(r0*sin(th0)*cos(ph0), r0*sin(th0)*sin(ph0), '*r')
+
+
+%% Difference
+pcolor(x,y ,I2 - I1)
+shading interp
+colorbar
